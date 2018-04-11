@@ -8,8 +8,9 @@ import { Component, Input } from '@angular/core';
 
 export class ButtonComponent {
   @Input() col: string;
+  title: string;
 
   constructor() {
-    this.theme = 'Another value';
+    this.title = 'Another value';
   }
 }
