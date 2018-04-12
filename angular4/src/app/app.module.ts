@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RdUIKit } from './modules/rd-uikit';
 
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './components/buttons/button.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ButtonComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RdUIKit
   ],
   providers: [],
   bootstrap: [AppComponent]
