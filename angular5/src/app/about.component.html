@@ -3,7 +3,7 @@
   <h1>
     About
   </h1>
-  <rd-button [theme]="'blue'" (click)="toggleShow()"><ng-content></ng-content></rd-button>
+  <rd-button [theme]="'blue'" (click)="toggleShow()">Show posts</rd-button>
   <div *ngIf="show">
       <div *ngFor="let post of posts">
           <h2>{{ post.title }}</h2>
