@@ -7,12 +7,16 @@ const httpOptions = {
 };
 
 @Injectable()
-export class HomeService {
+export class AppService {
 
   constructor(private http:HttpClient) {}
 
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
+  }
+
+  getPosts() {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts');
   }
 
 }

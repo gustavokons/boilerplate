@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RdUIKit } from './modules/rd-uikit';
 
-import { HomeService } from './home.service';
+import { AppService } from './app.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
@@ -28,9 +28,9 @@ const routes: Routes = [
     HttpClientModule
   ],
   providers: [
-    HomeService
+    AppService
   ],
-  //schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

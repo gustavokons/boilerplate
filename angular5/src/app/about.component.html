@@ -1,6 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     About
   </h1>
-  <rd-button [theme]="'green'"></rd-button>
+  <rd-button [theme]="'blue'" (click)="toggleShow()"><ng-content></ng-content></rd-button>
+  <div *ngIf="show">
+      <div *ngFor="let post of posts">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.body }}</p>
+      </div>
+  </div>
 </div>

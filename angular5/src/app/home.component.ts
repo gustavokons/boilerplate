@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeService } from './home.service';
+import { AppService } from './app.service';
 import { Observable } from 'rxjs/Rx';
 
 @Component({
@@ -8,14 +8,14 @@ import { Observable } from 'rxjs/Rx';
 export class HomeComponent {
   public users;
 
-  constructor(private _homeService: HomeService) { }
+  constructor(private _appService: AppService) { }
 
   ngOnInit() {
     this.getUsers();
   }
 
   getUsers() {
-    this._homeService.getUsers().subscribe(
+    this._appService.getUsers().subscribe(
       data => { this.users = data},
       err => console.error(err),
       () => console.log('done loading users')
